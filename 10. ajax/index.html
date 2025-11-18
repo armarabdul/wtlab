@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple AJAX</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h3>(a) AJAX without jQuery</h3>
+<button onclick="loadText()">Load Text </button>
+<div id="out1"></div>
+
+<h3>(b) AJAX with jQuery</h3>
+<button id="btn2">Load Text (jQuery)</button>
+<div id="out2"></div>
+
+<h3>(c) getJSON()</h3>
+<button id="btn3">Load JSON (getJSON)</button>
+<div id="out3"></div>
+
+<h3>(d) parseJSON()</h3>
+<button id="btn4">Parse JSON</button>
+<div id="out4"></div>
+
+<script>
+/* (a) AJAX WITHOUT jQuery */
+function loadText(){
+  let x = new XMLHttpRequest();
+  x.onload = function(){ document.getElementById("out1").innerText = this.responseText; }
+  x.open("GET", "text.txt");
+  x.send();
+}
+
+/* (b) AJAX WITH jQuery */
+$("#btn2").click(function(){
+  $.ajax("text.txt").done(function(data){
+    $("#out2").text(data);
+  });
+});
+
+/* (c) getJSON() */
+$("#btn3").click(function(){
+  $.getJSON("data.json", function(d){
+    $("#out3").text(d.name + " - " + d.age);
+  });
+});
+
+/* (d) parseJSON() */
+$("#btn4").click(function(){
+  let str = '{"city":"Bengaluru","pincode":560001}';
+  let obj = $.parseJSON(str);
+  $("#out4").text(obj.city + " - " + obj.pincode);
+});
+</script>
+
+</body>
+</html>
