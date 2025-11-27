@@ -1,0 +1,56 @@
+/* h2 selector */
+h2 {
+    color: blue;
+    text-align: center;
+}
+
+/* h3 selector */
+h3 {
+    color: green;
+    font-style: italic;
+}
+
+/* hr selector */
+hr {
+    border: 2px solid orange;
+}
+
+/* paragraph selector */
+p {
+    font-size: 16px;
+    color: #444;
+}
+
+/* div selector */
+div {
+    background-color: #f0f8ff;
+    padding: 10px;
+}
+
+/* span selector (inline highlight) */
+span {
+    color: red;
+    font-weight: bold;
+}
+
+/* time selector */
+time {
+    background-color: yellow;
+    padding: 2px 5px;
+}
+
+/* image selector */
+img {
+    width: 150px;
+    border: 3px solid black;
+}
+
+/* link selector */
+a {
+    color: purple;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
