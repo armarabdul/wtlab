@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mini Newspaper</title>
+
+  <!-- Minimal CSS: only styles requested -->
+  <style>
+    body { font-family: Arial, sans-serif; margin: 12px; }
+
+    header {
+      background:#1f6f8b; color:#fff; padding:10px;
+      font-size:20px; text-align:center;
+    }
+
+    nav { margin:8px 0; font-size:14px; }
+
+    /* Main layout */
+    .wrap { display:grid; grid-template-columns: 2fr 1fr; gap:10px; }
+
+    section {
+      background:#fff; padding:10px;
+      color:#222; font-size:15px;
+    }
+
+    article {
+      background:#f7fbff; padding:8px; margin-bottom:8px;
+      color:#0b4f6c; font-size:16px;
+    }
+
+    figure {
+      background:#fff7e6; padding:6px; margin:6px 0;
+      color:#663300; font-size:14px; text-align:center;
+    }
+    figure img { max-width:100%; height:auto; display:block; margin:4px auto; }
+
+    aside {
+      background:#fff8f8; padding:10px; color:#333;
+      font-size:14px;
+    }
+
+    table {
+      width:100%; border-collapse:collapse; margin-top:8px;
+      font-size:14px;
+    }
+    table, td, th { border:1px solid #ddd; }
+    th, td { padding:6px; text-align:left; background:#ffffff; }
+
+    footer {
+      background:#1f6f8b; color:#fff; padding:8px; text-align:center;
+      margin-top:10px; font-size:13px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Campus Bulletin — Mini Newspaper
+  </header>
+
+  <nav>
+    Home | Academics | Events | Contacts
+  </nav>
+
+  <div class="wrap">
+    <!-- main column -->
+    <section>
+      <article>
+        <h2>AI Workshop Held on Campus</h2>
+        <p>Over 100 students attended the hands-on AI workshop. Basics of ML and a small demo were covered.</p>
+      </article>
+
+      <article>
+        <h2>DBMS Lab Notices</h2>
+        <p>DBMS lab marks are published. Check the lab noticeboard for details and re-evaluation rules.</p>
+
+        <!-- simple facts table inside article -->
+        <table>
+          <thead>
+            <tr><th>Item</th><th>Detail</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Date</td><td>12 Nov 2025</td></tr>
+            <tr><td>Venue</td><td>CS Lab 2</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <figure>
+        <img src="https://via.placeholder.com/400x120" alt="workshop">
+        <figcaption>Students at the AI workshop</figcaption>
+      </figure>
+    </section>
+
+    <!-- sidebar -->
+    <aside>
+      <h3>Quick Links</h3>
+      <ul>
+        <li>Exam Timetable</li>
+        <li>Lab Schedule</li>
+        <li>Faculty Contacts</li>
+      </ul>
+
+      <h3>Note</h3>
+      <p>Register for next semester before the due date.</p>
+    </aside>
+  </div>
+
+  <footer>
+    &copy; Campus Bulletin — VTU CSE Student Edition
+  </footer>
+
+</body>
+</html>

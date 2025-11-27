@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <style>
+        body { background:#f4faff; font-family:Arial; }
+        table { background:white; padding:15px; border-collapse:collapse; }
+        td { padding:6px; }
+        .label { color:#004a7c; font-weight:bold; }
+        input, select, textarea { width:180px; padding:4px; }
+        h2 { text-align:center; color:#003355; }
+        button { padding:6px 12px; background:#005f91; color:#fff; border:none; }
+    </style>
+
+</head>
+<body>
+
+<h2>Simple Registration Form</h2>
+
+<table border="1" align="center">
+    <tr>
+        <td class="label">Full Name</td>
+        <td><input type="text" placeholder="Enter name"></td>
+    </tr>
+
+    <tr>
+        <td class="label">Email</td>
+        <td><input type="email" placeholder="example@mail.com"></td>
+    </tr>
+
+    <tr>
+        <td class="label">Password</td>
+        <td><input type="password"></td>
+    </tr>
+
+    <tr>
+        <td class="label">Gender</td>
+        <td>
+            <input type="radio" name="g"> Male
+            <input type="radio" name="g"> Female
+        </td>
+    </tr>
+
+    <tr>
+        <td class="label">Hobbies</td>
+        <td>
+            <input type="checkbox"> Reading
+            <input type="checkbox"> Sports
+        </td>
+    </tr>
+
+    <tr>
+        <td class="label">Date of Birth</td>
+        <td><input type="date"></td>
+    </tr>
+
+    <tr>
+        <td class="label">Department</td>
+        <td>
+            <select>
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>ISE</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="label">Address</td>
+        <td><textarea rows="2"></textarea></td>
+    </tr>
+
+    <tr>
+        <td colspan="2" align="center">
+            <button>Register</button>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
